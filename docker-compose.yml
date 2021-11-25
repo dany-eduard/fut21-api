@@ -1,0 +1,16 @@
+# docker-compose postgresql
+version: '3.8'
+
+services:
+  postgres:
+    container_name: postgresql-db
+    image: postgres:latest
+    restart: always
+    volumes:
+      - ~/data/postgresql:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: jugadores_db
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    ports:
+      - '5432:5432'
