@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS jugadores_db;
+CREATE TABLE jugadores IF NOT EXISTS(
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(255),
+  posicion VARCHAR(4),
+  nacionalidad VARCHAR(255),
+  equipo VARCHAR(255),
+  PRIMARY KEY(id)
+);
