@@ -1,0 +1,36 @@
+{
+  "name": "fut21-api",
+  "version": "1.0.0",
+  "description": "API FIFA 2021",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "ts-node": "ts-node ./src/script.ts",
+    "start": "node ./dist/index.js",
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts —-fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Eduardo Almagro",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.11.9",
+    "@types/pg": "^8.6.1",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "got": "^11.8.3",
+    "pg": "^8.7.1"
+  }
+}
