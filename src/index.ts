@@ -1,5 +1,14 @@
 import express from 'express'
 import indexRoutes from './routes'
+import main from './script'
+
+;(async () => {
+  try {
+    await main()
+  } catch (error) {
+    console.error(error)
+  }
+})()
 
 const app = express()
 

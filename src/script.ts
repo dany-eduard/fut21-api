@@ -98,4 +98,4 @@ const main = async () => {
   process.exit(1)
 }
 
-main().catch(console.error)
+export default main
