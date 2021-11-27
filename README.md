@@ -16,7 +16,8 @@ Para correr el servidor, use `npm run dev`. Este comando ejecutara _nodemon_ con
 
 ### Rutas
 
-**`[POST] /api/v1/team`** Retorna los jugadores de un equipo sin importar si se escribe en minúscula o mayúscula.
+#### **`[POST] /api/v1/team`** 
+Retorna los jugadores de un equipo sin importar si se escribe en minúscula o mayúscula.
 
 **Ejemplo**
 
@@ -57,7 +58,8 @@ Para correr el servidor, use `npm run dev`. Este comando ejecutara _nodemon_ con
 }
 ```
 
-**`[GET] /api/v1/players/:id`** Retorna el jugador con el id enviado como params.
+#### **`[GET] /api/v1/players/:id`** 
+Retorna el jugador con el id enviado como params.
 
 ```js
 /api/v1/players/324
@@ -87,7 +89,8 @@ https://fut21-api.herokuapp.com/api/v1/players/15503
 }
 ```
 
-**`[GET] /api/v1/players`** Puede retornar una lista de jugadores o las coincidencias por el criterio de búsqueda. Además de ordenar y paginar.
+#### **`[GET] /api/v1/players`** 
+Puede retornar una lista de jugadores o las coincidencias por el criterio de búsqueda. Además de ordenar y paginar.
 
 ```js
 /api/v1/players
