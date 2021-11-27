@@ -1,4 +1,4 @@
-# Fut21 Api
+# Fut21 API
 
 Este proyecto es una réplica de la [API](https://www.easports.com/fifa/ultimate-team/api/fut/item) del juego FIFA 21 Ultimate Team que permita hacer una búsqueda de jugadores y equipos. Fue construida usando Node.js y Express.
 
