@@ -3,7 +3,7 @@ import indexRoutes from './routes'
 import main from './script'
 ;(async () => {
   try {
-    await main()
+    await main().catch(console.error)
   } catch (error) {
     console.error(error)
   }
