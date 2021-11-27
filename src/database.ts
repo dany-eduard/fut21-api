@@ -1,8 +1,11 @@
 require('dotenv').config({ path: '../.env' })
 import { Pool } from 'pg'
 
-const connectionString = process.env.CONNECTION_STRING
+const connectionString = process.env.DATABASE_URL
 
 export const pool = new Pool({
-  connectionString
+  connectionString,
+  ssl: {
+    rejectUnauthorized: false
+  }
 })
