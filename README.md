@@ -18,17 +18,73 @@ Para correr el servidor, use `npm run dev`. Este comando ejecutara _nodemon_ con
 
 **`[POST] /api/v1/team`** Retorna los jugadores de un equipo sin importar si se escribe en minúscula o mayúscula.
 
-```js
-body: {
-        "name": "real madrid",
-        "page": 4
-      }
+**Ejemplo**
+
+```json
+// body request
+{
+  "name": "real madrid",
+  "page": 4
+}
+```
+
+**Ejemplo de response**
+
+```json
+{
+  "message": "Jugadores de real madrid",
+  "page": 4,
+  "totalPages": 8,
+  "totalResults": 181,
+  "count": 24,
+  "data": [
+    {
+      "id": 4147,
+      "nombre": "Jesús Vallejo Lázaro",
+      "posicion": "CB",
+      "nacionalidad": "Spain",
+      "equipo": "Real Madrid"
+    },
+    {
+      "id": 3930,
+      "nombre": "Jesús Vallejo Lázaro",
+      "posicion": "CB",
+      "nacionalidad": "Spain",
+      "equipo": "Real Madrid"
+    },
+    ...
+  ]
+}
 ```
 
 **`[GET] /api/v1/players/:id`** Retorna el jugador con el id enviado como params.
 
 ```js
 /api/v1/players/324
+```
+
+**Ejemplo**
+
+```nodejs
+// url request
+https://fut21-api.herokuapp.com/api/v1/players/15503
+```
+
+**Ejemplo de response**
+
+```json
+{
+  "message": "Jugador obtenido",
+  "data": [
+    {
+      "id": 15503,
+      "nombre": "Aaron Cresswell",
+      "posicion": "CB",
+      "nacionalidad": "England",
+      "equipo": "West Ham United"
+    }
+  ]
+}
 ```
 
 **`[GET] /api/v1/players`** Puede retornar una lista de jugadores o las coincidencias por el criterio de búsqueda. Además de ordenar y paginar.
@@ -38,6 +94,42 @@ body: {
 /api/v1/players?search=cristi
 /api/v1/players?search=cristi&order=asc&page=1
 /api/v1/players?order=asc&page=1
+```
+
+**Ejemplo**
+
+```nodejs
+// url request
+https://fut21-api.herokuapp.com/api/v1/players?search=cristi&order=asc&page=1
+```
+
+**Ejemplo de response**
+
+```json
+{
+  "message": "Jugadores obtenidos",
+  "page": 1,
+  "totalPages": 5,
+  "totalResults": 98,
+  "count": 24,
+  "data": [
+    {
+      "id": 6023,
+      "nombre": "Cristian Álvarez",
+      "posicion": "GK",
+      "nacionalidad": "Argentina",
+      "equipo": "R. Zaragoza"
+    },
+    {
+      "id": 15495,
+      "nombre": "Cristian Álvarez",
+      "posicion": "GK",
+      "nacionalidad": "Argentina",
+      "equipo": "R. Zaragoza"
+    },
+    ...
+  ]
+}
 ```
 
 > Nota: Puedes usar [docker-compose up](https://github.com/dany-eduard/fut21-api/blob/main/docker-compose.yml) para instalar y configurar automáticamente Postgres en un contenedor de Docker.
