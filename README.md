@@ -2,6 +2,8 @@
 
 Este proyecto es una réplica de la [API](https://www.easports.com/fifa/ultimate-team/api/fut/item) del juego FIFA 21 Ultimate Team que permite hacer una búsqueda de jugadores y equipos. Fue construida usando Node.js y Express.
 
+> App Client [Deploy](https://dany-eduard.github.io/fut21-app/) or [GitHub repo](https://github.com/dany-eduard/fut21-app)
+
 ## Iniciando
 
 1. Clone el repositorio `git clone https://github.com/dany-eduard/fut21-api.git`
